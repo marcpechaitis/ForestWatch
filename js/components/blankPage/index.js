@@ -40,7 +40,7 @@ class BlankPage extends Component {
               {platform === 'ios'
                 ? null
                 : <Title style={commonStyles.headerTextAndroid}>
-                    {name ? this.props.name : { pageTitle }}
+                    {name ? this.props.name : pageTitle}
                   </Title>}
             </Button>
           </Left>
