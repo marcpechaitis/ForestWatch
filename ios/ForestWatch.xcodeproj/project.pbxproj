@@ -25,6 +25,7 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		171E6B94118949DA93CF6DA7 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E1B42C40AE14319A7841266 /* Roboto.ttf */; };
 		198D1CF24FAD4F18A8EDFF6F /* Arial Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 824C3D2D3AC642E18E9987E2 /* Arial Black.ttf */; };
+		1A6B850ADA5847C18592C39B /* libSplashScreen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4C7A82827894579B9183D7C /* libSplashScreen.a */; };
 		1D18D898D90843FDAC29AB36 /* SF-UI-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32CDF76CEAF8489F96B2674B /* SF-UI-Text-Regular.otf */; };
 		1EABE6A5FA924CB48E85FF0B /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BF578C9B1BD42F7B4A223EA /* Rubik-Light.ttf */; };
 		3096A6A0794B45C385085425 /* SanFrancisco.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AFDDDD32865D4E5A91284EB7 /* SanFrancisco.ttf */; };
@@ -237,6 +238,13 @@
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = CodePush;
 		};
+		61ADB1351EAABD8C0099E040 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88C679422D844DA0868A2668 /* SplashScreen.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3D7682761D8E76B80014119E;
+			remoteInfo = SplashScreen;
+		};
 		78C398B81ACF4ADC00677621 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
@@ -298,6 +306,7 @@
 		824C3D2D3AC642E18E9987E2 /* Arial Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Arial Black.ttf"; path = "../node_modules/native-base/Fonts/Arial Black.ttf"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		84680BBFE3754D089EFD9F56 /* Arial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Arial.ttf; path = "../node_modules/native-base/Fonts/Arial.ttf"; sourceTree = "<group>"; };
+		88C679422D844DA0868A2668 /* SplashScreen.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = SplashScreen.xcodeproj; path = "../node_modules/react-native-splash-screen/ios/SplashScreen.xcodeproj"; sourceTree = "<group>"; };
 		9744AFC5BF0840FD8D0221EF /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		9E1B42C40AE14319A7841266 /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
 		A0D9CACEB3C948EBBBDBD49E /* Andale Mono.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Andale Mono.ttf"; path = "../node_modules/native-base/Fonts/Andale Mono.ttf"; sourceTree = "<group>"; };
@@ -310,6 +319,7 @@
 		BF3B91F2A1B74446AAF7B70B /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-LightItalic.ttf"; path = "../node_modules/native-base/Fonts/Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
 		D57037518546479996E13597 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		DA833F0A311945E4BB4DAD44 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		E4C7A82827894579B9183D7C /* libSplashScreen.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libSplashScreen.a; sourceTree = "<group>"; };
 		E72D393B011A4BC38235C277 /* libCodePush.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libCodePush.a; sourceTree = "<group>"; };
 		ED60866CF4994B0A9FC259FA /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -340,6 +350,7 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				DE2158CEB8814EBABF969021 /* libCodePush.a in Frameworks */,
 				893126B472094AFBBDF57049 /* libz.tbd in Frameworks */,
+				1A6B850ADA5847C18592C39B /* libSplashScreen.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,6 +487,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		61ADB1181EAABD8C0099E040 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61ADB1361EAABD8C0099E040 /* libSplashScreen.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		645EE9E6C496467E80F7BDF7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -541,6 +560,7 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				B0E651FE881F48E19EED1381 /* CodePush.xcodeproj */,
+				88C679422D844DA0868A2668 /* SplashScreen.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -623,7 +643,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 830;
 				ORGANIZATIONNAME = "Sugarloaf App Company";
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -695,6 +715,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = 61ADB1181EAABD8C0099E040 /* Products */;
+					ProjectRef = 88C679422D844DA0868A2668 /* SplashScreen.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -874,6 +898,13 @@
 			remoteRef = 61ADB0E21EAA5B2A0099E040 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		61ADB1361EAABD8C0099E040 /* libSplashScreen.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSplashScreen.a;
+			remoteRef = 61ADB1351EAABD8C0099E040 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		78C398B91ACF4ADC00677621 /* libRCTLinking.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1014,12 +1045,14 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 				);
 				INFOPLIST_FILE = ForestWatchTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1041,12 +1074,14 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 				);
 				INFOPLIST_FILE = ForestWatchTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				OTHER_LDFLAGS = (
@@ -1070,6 +1105,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 				);
 				INFOPLIST_FILE = ForestWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1094,6 +1130,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-code-push/ios/CodePush/**",
+					"$(SRCROOT)/../node_modules/react-native-splash-screen/ios",
 				);
 				INFOPLIST_FILE = ForestWatch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

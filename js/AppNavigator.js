@@ -3,6 +3,7 @@ import { StatusBar } from 'react-native';
 import { connect } from 'react-redux';
 import { Drawer } from 'native-base';
 import { Router, Scene } from 'react-native-router-flux';
+import SplashScreen from 'react-native-splash-screen';
 
 import { closeDrawer } from './actions/drawer';
 
@@ -21,6 +22,11 @@ class AppNavigator extends Component {
     drawerState: React.PropTypes.string,
     closeDrawer: React.PropTypes.func
   };
+
+  componentDidMount() {
+    SplashScreen.hide();
+  }
+
   componentDidUpdate() {
     if (this.props.drawerState === 'opened') {
       this.openDrawer();
