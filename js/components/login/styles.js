@@ -7,8 +7,7 @@ const { /* StyleSheet, */ Dimensions } = React;
 // const deviceHeight = Dimensions.get('window').height;
 const window = Dimensions.get('window');
 
-export const IMAGE_HEIGHT = window.width / 2;
-export const IMAGE_HEIGHT_SMALL = window.width / 5;
+export const IMAGE_HEIGHT = window.width / 5;
 
 export default {
   container: {
@@ -26,7 +25,7 @@ export default {
   logo: {
     height: IMAGE_HEIGHT,
     resizeMode: 'contain',
-    marginBottom: 30
+    marginBottom: 96
   }
   /*  shadow: {
     flex: 1,

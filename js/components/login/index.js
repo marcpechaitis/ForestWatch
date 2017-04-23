@@ -1,25 +1,13 @@
 import React, { Component } from 'react';
-import { Alert, Animated, Keyboard, KeyboardAvoidingView } from 'react-native';
+import { Alert, Image, KeyboardAvoidingView } from 'react-native';
 import { connect } from 'react-redux';
-import {
-  //  Container,
-  // Content,
-  Button,
-  Item,
-  Input,
-  // Button,
-  Icon,
-  // View,
-  Text
-} from 'native-base';
+import { Button, Icon, Item, Input, Text } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 
-import styles, { IMAGE_HEIGHT, IMAGE_HEIGHT_SMALL } from './styles';
+import styles, { IMAGE_HEIGHT } from './styles';
 import commonStyles from '../../common/commonStyles';
 import logo from '../../../images/logo.png';
 import { setUser } from '../../actions/user';
-
-// const background = require('../../../images/shadow.png');
 
 class Login extends Component {
   static propTypes = {
@@ -29,54 +17,53 @@ class Login extends Component {
     super(props);
     this.state = {
       name: '',
-      password: ''
+      password: '',
+      isUsernameValid: false,
+      isUsernameError: false,
+      isPasswordValid: false,
+      isPasswordError: false
     };
-    this.imageHeight = new Animated.Value(IMAGE_HEIGHT);
   }
 
-  componentWillMount() {
-    this.keyboardWillShowSub = Keyboard.addListener(
-      'keyboardWillShow',
-      this.keyboardWillShow
-    );
-    this.keyboardWillHideSub = Keyboard.addListener(
-      'keyboardWillHide',
-      this.keyboardWillHide
-    );
-  }
+  componentWillMount() {}
 
-  componentWillUnmount() {
-    this.keyboardWillShowSub.remove();
-    this.keyboardWillHideSub.remove();
-  }
+  componentWillUnmount() {}
 
   setUser(name) {
     this.props.setUser(name);
   }
 
-  keyboardWillShow = event => {
-    Animated.timing(this.imageHeight, {
-      duration: event.duration,
-      toValue: IMAGE_HEIGHT_SMALL
-    }).start();
-  };
-
-  keyboardWillHide = event => {
-    Animated.timing(this.imageHeight, {
-      duration: event.duration,
-      toValue: IMAGE_HEIGHT
-    }).start();
-  };
+  pressSignIn() {
+    // Alert.alert('Bingo', '');
+    if (this.state.name) {
+      this.setState({ isUsernameValid: true });
+      this.setState({ isUsernameError: false });
+      if (this.state.password) {
+        this.setState({ isPasswordValid: true });
+        this.setState({ isPasswordError: false });
+      } else {
+        this.setState({ isPasswordValid: false });
+        this.setState({ isPasswordError: true });
+      }
+    } else {
+      this.setState({ isUsernameValid: false });
+      this.setState({ isUsernameError: true });
+    }
+    if (this.state.isUsernameValid && this.isPasswordValid) {
+      // Do the Login
+    }
+  }
 
   render() {
-    const isValid = null;
+    // let isUsernameValid = false;
+    // let isPasswordValid = false;
     return (
       <KeyboardAvoidingView style={styles.container} behavior="padding">
-        <Animated.Image
-          source={logo}
-          style={[styles.logo, { height: this.imageHeight }]}
-        />
-        <Item success={isValid ? true : null} error={isValid ? null : true}>
+        <Image source={logo} style={[styles.logo, { height: IMAGE_HEIGHT }]} />
+        <Item
+          success={this.state.isUsernameValid ? true : null}
+          error={this.state.isUsernameError ? true : null}
+        >
           {/*  <Item success> */}
           <Icon name="person" />
           <Input
@@ -85,7 +72,9 @@ class Login extends Component {
             }}
             autoCapitalize="none"
             autoCorrect={false}
-            placeholder="Username or Email"
+            placeholder={
+              this.state.isUsernameError ? 'Username Required' : 'Username'
+            }
             onChangeText={name => this.setState({ name })}
             onSubmitEditing={() => this.passwordInput._root.focus()}
             returnKeyType="next"
@@ -93,23 +82,27 @@ class Login extends Component {
           />
           <Icon name="checkmark-circle" />
         </Item>
-        <Item style={{ marginBottom: 24 }}>
+        <Item
+          success={this.state.isPasswordValid ? true : null}
+          error={this.state.isPasswordError ? true : null}
+          style={{ marginBottom: 24 }}
+        >
           <Icon name="unlock" />
           <Input
             ref={c => {
               this.passwordInput = c;
             }}
-            placeholder="Password"
+            placeholder={
+              this.state.isPasswordError ? 'Password Required' : 'Password'
+            }
             secureTextEntry
             onChangeText={password => this.setState({ password })}
             returnKeyType="go"
           />
+          <Icon name="checkmark-circle" />
         </Item>
 
-        <Button
-          style={commonStyles.button}
-          onPress={() => Alert.alert('Bingo', '')}
-        >
+        <Button style={commonStyles.button} onPress={() => this.pressSignIn()}>
           <Text style={commonStyles.buttonText} allowFontScaling={false}>
             Sign In
           </Text>
