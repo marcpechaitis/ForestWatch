@@ -11,12 +11,13 @@ import styles from './style';
 class SideBar extends Component {
   static propTypes = {
     // setIndex: React.PropTypes.func,
-    closeDrawer: React.PropTypes.func,
-    navigateTo: React.PropTypes.func
+    closeDrawer: React.PropTypes.func
+    //   navigateTo: React.PropTypes.func
   };
-  navigateTo(route) {
-    this.props.navigateTo(route, 'home');
-  }
+
+  // navigateTo(route) {
+  // this.props.navigateTo(route, 'home');
+  // }
 
   render() {
     return (

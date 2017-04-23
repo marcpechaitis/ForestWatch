@@ -11,7 +11,8 @@ import { setUser } from '../../actions/user';
 
 class Login extends Component {
   static propTypes = {
-    setUser: React.PropTypes.func
+    setUser: React.PropTypes.func,
+    navigateTo: React.PropTypes.func
   };
   constructor(props) {
     super(props);
@@ -33,8 +34,21 @@ class Login extends Component {
     this.props.setUser(name);
   }
 
-  pressSignIn() {
+  navigateTo(route) {
+    this.props.navigateTo(route, 'home');
+  }
+
+  async pressSignIn() {
     // Alert.alert('Bingo', '');
+
+    await this.checkForValues();
+    if (this.state.isUsernameValid && this.state.isPasswordValid) {
+      // this.goHome();
+      this.setUser(this.state.name);
+      Actions.home();
+    }
+  }
+  checkForValues() {
     if (this.state.name) {
       this.setState({ isUsernameValid: true });
       this.setState({ isUsernameError: false });
@@ -49,8 +63,12 @@ class Login extends Component {
       this.setState({ isUsernameValid: false });
       this.setState({ isUsernameError: true });
     }
-    if (this.state.isUsernameValid && this.isPasswordValid) {
+  }
+
+  goHome() {
+    if (this.state.isUsernameValid && this.state.isPasswordValid) {
       // Do the Login
+      Actions.home();
     }
   }
 
@@ -64,7 +82,6 @@ class Login extends Component {
           success={this.state.isUsernameValid ? true : null}
           error={this.state.isUsernameError ? true : null}
         >
-          {/*  <Item success> */}
           <Icon name="person" />
           <Input
             ref={c => {
@@ -72,13 +89,14 @@ class Login extends Component {
             }}
             autoCapitalize="none"
             autoCorrect={false}
+            blurOnSubmit={false}
             placeholder={
               this.state.isUsernameError ? 'Username Required' : 'Username'
             }
             onChangeText={name => this.setState({ name })}
             onSubmitEditing={() => this.passwordInput._root.focus()}
             returnKeyType="next"
-            keyboardType="email-address"
+            //           keyboardType="email-address"
           />
           <Icon name="checkmark-circle" />
         </Item>
@@ -97,12 +115,18 @@ class Login extends Component {
             }
             secureTextEntry
             onChangeText={password => this.setState({ password })}
-            returnKeyType="go"
+            returnKeyType="done"
           />
           <Icon name="checkmark-circle" />
         </Item>
 
-        <Button style={commonStyles.button} onPress={() => this.pressSignIn()}>
+        <Button
+          style={commonStyles.button}
+          onPress={() => {
+            this.pressSignIn();
+            this.goHome();
+          }}
+        >
           <Text style={commonStyles.buttonText} allowFontScaling={false}>
             Sign In
           </Text>
